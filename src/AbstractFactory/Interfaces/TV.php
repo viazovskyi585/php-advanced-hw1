@@ -4,5 +4,5 @@ namespace AbstractFactory\Interfaces;
 
 interface TV
 {
-	public function play();
+	public function play(): void;
 }

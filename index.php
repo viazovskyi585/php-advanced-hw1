@@ -5,9 +5,20 @@ use AbstractFactory\Factories\LGFactory;
 use AbstractFactory\Factories\SonyFactory;
 
 $lgFactory = new LGFactory();
-$lgTV = $lgFactory->createTV();
-$lgTV->play();
-
 $sonyFactory = new SonyFactory();
-$sonyTV = $sonyFactory->createTV();
-$sonyTV->play();
+
+$lgLCD = $lgFactory->createLCD();
+$lgLCD->play();
+echo "<br>";
+
+$lgLED = $lgFactory->createLED();
+$lgLED->play();
+echo "<br>";
+
+$sonyLED = $sonyFactory->createLED();
+$sonyLED->play();
+echo "<br>";
+
+$sonyLCD = $sonyFactory->createLCD();
+$sonyLCD->play();
+echo "<br>";

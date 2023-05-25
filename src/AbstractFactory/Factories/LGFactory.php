@@ -1,13 +1,22 @@
 <?php
 namespace AbstractFactory\Factories;
+
+use AbstractFactory\Classes\LGLCD;
+use AbstractFactory\Classes\LGLED;
+use AbstractFactory\Interfaces\LCDTV;
+use AbstractFactory\Interfaces\LEDTV;
 use AbstractFactory\Interfaces\TVFactory;
 use AbstractFactory\Interfaces\TV;
-use AbstractFactory\Classes\LGTV;
 
 class LGFactory implements TVFactory
 {
-	public function createTV(): TV
+	public function createLED(): LEDTV
 	{
-		return new LGTV();
+		return new LGLED();
+	}
+
+	public function createLCD(): LCDTV
+	{
+		return new LGLCD();
 	}
 }
